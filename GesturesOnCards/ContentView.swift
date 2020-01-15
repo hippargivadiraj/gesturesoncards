@@ -20,7 +20,7 @@ struct ContentView: View {
             .onEnded({ ()  in
                 self.tapped.toggle()
             }))
-            .offset(y: self.cardDragState.height)
+            .offset(x: self.cardDragState.width , y: self.cardDragState.height)
         .gesture(DragGesture()
             .onChanged( { value in
                 self.cardDragState =   value.translation
