@@ -15,6 +15,7 @@ struct ContentView: View {
     
     var body: some View {
         Card(tapped: tapped)
+        .padding()
             .animation(.default)
         .gesture(TapGesture(count: 1)
             .onEnded({ ()  in
